@@ -6,7 +6,7 @@ USER root
 
 #RUN R -e "install.packages(c('<package>'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())"
 
-RUN mamba install -y\
+RUN mamba install -c conda-forge -y\
     r-arrow\
     r-aws.s3\
     r-bench\
@@ -19,7 +19,7 @@ RUN mamba install -y\
     r-scattermore\
     r-tensorflow\
     r-tfestimators\
-    r-twitter
+    r::r-twitter
 
 #RUN pip install <packages>
 
