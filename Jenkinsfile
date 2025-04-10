@@ -52,7 +52,6 @@ pipeline {
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"future.apply\")"'
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"gamlr\")"'
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"ggplot2\")"'
-                            sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"gpuR\")"'
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"httr\")"'
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"jsonlite\")"'
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"keras\")"'
