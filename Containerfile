@@ -11,7 +11,7 @@ RUN R -e "install.packages(c('aws.s3', 'bench', 'bookdown', 'ff', 'foreach', 'fu
 
 RUN R -e "devtools::install_github('edwindj/ffbase', subdir='pkg')"
 
-RUN conda install -c conda-forge -y --freeze-installed, --no-update-deps \
+RUN conda install -c conda-forge -y --freeze-installed --no-update-deps \
     r-arrow\
     r-rjdbc
 
