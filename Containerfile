@@ -6,7 +6,7 @@ USER root
 
 #RUN R -e "install.packages(c('future'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())"
 
-RUN mamba install -c conda-forge -y\
+RUN conda install -c conda-forge -y\
     r-arrow\
     r-aws.s3\
     r-bench\
@@ -14,13 +14,12 @@ RUN mamba install -c conda-forge -y\
     r-ff\
     r-ffbase\
     r-foreach\
-    r::r-future\
+    r-future\
     r-keras\
     r-rjdbc\
     r-scattermore\
     r-tensorflow\
-    r-tfestimators\
-    r::r-twitter
+    r-tfestimators
 
 #RUN pip install <packages>
 
