@@ -4,7 +4,7 @@ pipeline {
         upstream(upstreamProjects: 'UCSB-PSTAT GitHub/all-spark-base/main', threshold: hudson.model.Result.SUCCESS)
     }
     environment {
-        IMAGE_NAME = 'pstat134'
+        IMAGE_NAME = 'pstat135'
     }
     stages {
         stage('Build Test Deploy') {
