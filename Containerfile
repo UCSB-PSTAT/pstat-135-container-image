@@ -4,7 +4,7 @@ LABEL maintainer="LSIT Systems <lsitops@ucsb.edu>"
 
 USER root
 
-RUN R -e "install.packages(c('future'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())"
+#RUN R -e "install.packages(c('future'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())"
 
 RUN mamba install -c conda-forge -y\
     r-arrow\
@@ -14,6 +14,7 @@ RUN mamba install -c conda-forge -y\
     r-ff\
     r-ffbase\
     r-foreach\
+    r::r-furture\
     r-keras\
     r-rjdbc\
     r-scattermore\
