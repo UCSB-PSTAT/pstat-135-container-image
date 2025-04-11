@@ -14,7 +14,7 @@ RUN mamba install -c conda-forge -y\
     r-ff\
     r-ffbase\
     r-foreach\
-    r::r-furture\
+    r::r-future\
     r-keras\
     r-rjdbc\
     r-scattermore\
