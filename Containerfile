@@ -19,3 +19,6 @@ RUN conda install -c conda-forge -y --freeze-installed --no-update-deps \
 
 USER $NB_USER
 
+# Set Java Home for ver. 17
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 \
+    PATH=$JAVA_HOME/bin:$PATH
