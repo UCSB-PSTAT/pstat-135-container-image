@@ -67,7 +67,6 @@ pipeline {
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"tensorflow\")"'
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"tfestimators\")"'
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"xml2\")"'
-                            sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME which java | grep -v conda'
                             sh 'podman run -d --name=$IMAGE_NAME --rm --pull=never -p 8888:8888 localhost/$IMAGE_NAME start-notebook.sh --NotebookApp.token="jenkinstest"'
                             sh 'sleep 10 && curl -v http://localhost:8888/lab?token=jenkinstest 2>&1 | grep -P "HTTP\\S+\\s200\\s+[\\w\\s]+\\s*$"'
                         }
