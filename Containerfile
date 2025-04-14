@@ -4,7 +4,7 @@ LABEL maintainer="LSIT Systems <lsitops@ucsb.edu>"
 
 USER root
 
-RUN conda install -c conda-forge -y --freeze-installed --no-update-deps \
+RUN conda install -c conda-forge -y\
     r-arrow\
     r-rjdbc
 
