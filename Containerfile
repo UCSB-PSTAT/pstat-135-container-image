@@ -6,7 +6,8 @@ USER root
 
 RUN conda install -c conda-forge -y\
     r-arrow\
-    r-rjdbc
+    r-rjdbc\
+    openjdk">=17.0.14,<18.0.0"
 
 
 #Configure R/openjdk for arrow
