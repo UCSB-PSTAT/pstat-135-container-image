@@ -63,7 +63,7 @@ pipeline {
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"rvest\")"'
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"scattermore\")"'
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"sparklyr\")"'
-                            sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"SparkR\")"'
+                            sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"SparkR\"); sparkR.session()"'
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"tensorflow\")"'
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"tfestimators\")"'
                             sh 'podman run -it --rm --pull=never localhost/$IMAGE_NAME R -e "library(\"xml2\")"'
