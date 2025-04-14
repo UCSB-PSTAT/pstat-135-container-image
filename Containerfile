@@ -14,11 +14,9 @@ RUN R -e "devtools::install_github('edwindj/ffbase', subdir='pkg')"
 RUN conda install -c conda-forge -y --freeze-installed --no-update-deps \
     r-arrow\
     r-rjdbc
+# Remove openjdk from conda and use the system lib. 
+RUN conda remove openjdk -y --force
 
 #RUN pip install <packages>
 
 USER $NB_USER
-
-# Set Java Home for ver. 17
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 \
-    PATH=$JAVA_HOME/bin:$PATH
