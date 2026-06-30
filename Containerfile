@@ -1,4 +1,4 @@
-FROM ucsb/all-spark-base:latest
+FROM registry.cloud.college.ucsb.edu/ucsb/all-spark-base:latest
 
 LABEL maintainer="LSIT Systems <lsitops@ucsb.edu>"
 
