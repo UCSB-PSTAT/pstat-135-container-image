@@ -6,6 +6,7 @@ USER root
 
 RUN conda install -c conda-forge -y\
     r-arrow\
+    r-microbenchmark \
     r-rjdbc\
     r-tfestimators\
     openjdk">=17.0.14,<18.0.0"
