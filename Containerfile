@@ -9,6 +9,7 @@ RUN conda install -c conda-forge -y\
     r-microbenchmark \
     r-rjdbc\
     r-tfestimators\
+    r-pryr \
     openjdk">=17.0.14,<18.0.0"
 
 
